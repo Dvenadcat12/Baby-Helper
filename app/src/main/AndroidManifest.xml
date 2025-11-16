@@ -14,6 +14,8 @@
         <activity android:name=".NotesActivity"/>
         <activity android:name=".TimerActivity"/>
         <activity android:name=".TipsActivity"/>
+        <activity android:name=".LoginActivity"/>
+        <activity android:name=".RegisterActivity"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
