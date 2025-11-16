@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    //google services
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -9,9 +11,19 @@ android {
         version = release(36)
     }
 
+    buildFeatures {
+        viewBinding = true
+    }
+    configurations.all {
+        exclude(group = "com.intellij", module = "annotations")
+        resolutionStrategy {
+            force ("org.jetbrains:annotations:23.0.0")
+        }
+    }
+
     defaultConfig {
         applicationId = "com.example.babyhelper"
-        minSdk = 23
+        minSdk = 26
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
@@ -60,5 +72,11 @@ dependencies {
     implementation(libs.gson)
     // Material components
     implementation(libs.material)
+    implementation(libs.androidx.fragment.ktx)
+    //firebase Bom
+    implementation(platform(libs.firebase.bom))
+    // TODO: Add the dependencies for Firebase products you want to use
+    // When using the BoM, don't specify versions in Firebase dependencies
+    implementation(libs.firebase.analytics)
 
 }

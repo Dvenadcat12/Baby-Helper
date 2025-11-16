@@ -11,6 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BabyHelper">
+        <activity android:name=".NotesActivity"/>
+        <activity android:name=".TimerActivity"/>
+        <activity android:name=".TipsActivity"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
