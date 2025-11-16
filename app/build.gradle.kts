@@ -5,12 +5,14 @@ plugins {
 
 android {
     namespace = "com.example.babyhelper"
-    compileSdk = 34  // ИСПРАВЛЕНО: убрал блок version = release(36)
+    compileSdk {
+        version = release(36)
+    }
 
     defaultConfig {
         applicationId = "com.example.babyhelper"
-        minSdk = 24  // ИСПРАВЛЕНО: 16 слишком низко для современных приложений
-        targetSdk = 34  // ИСПРАВЛЕНО: 36 → 34
+        minSdk = 23
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
@@ -27,21 +29,36 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8  // ИСПРАВЛЕНО: 11 → 1_8
-        targetCompatibility = JavaVersion.VERSION_1_8  // ИСПРАВЛЕНО: 11 → 1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = "1.8"  // ИСПРАВЛЕНО: 11 → 1.8
+        jvmTarget = "11"
     }
 }
 
 dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
-    implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    //Room
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.ktx)
+    // Lifecycle / ViewModel / LiveData
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    // Coroutines
+    implementation(libs.kotlinx.coroutines.android)
+    // RecyclerView
+    implementation(libs.androidx.recyclerview)
+    // Gson
+    implementation(libs.gson)
+    // Material components
+    implementation(libs.material)
+
 }
