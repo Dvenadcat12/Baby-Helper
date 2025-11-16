@@ -17,13 +17,11 @@ class MainActivity : AppCompatActivity() {
 
         // Проверяем, вошёл ли пользователь
         if (auth.currentUser == null) {
-            // Пользователь не авторизован → открываем экран входа
             startActivity(Intent(this, LoginActivity::class.java))
-            finish() // закрываем MainActivity
+            finish()
             return
         }
 
-        // Пользователь уже вошёл → показываем главную страницу приложения
         setContentView(R.layout.activity_main)
 
         findViewById<Button>(R.id.buttonTips).setOnClickListener {
@@ -36,6 +34,14 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.buttonTimer).setOnClickListener {
             startActivity(Intent(this, TimerActivity::class.java))
+        }
+
+        // Кнопка выхода
+        findViewById<Button>(R.id.buttonLogout).setOnClickListener {
+            auth.signOut() // Выходим из аккаунта
+            // Возвращаемся на экран входа
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
         }
     }
 }

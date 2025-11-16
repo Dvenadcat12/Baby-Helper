@@ -74,6 +74,7 @@ dependencies {
     // Material components
     implementation(libs.material)
 
+    //DATABASE
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.analytics)
     implementation(libs.firebase.auth.ktx)
