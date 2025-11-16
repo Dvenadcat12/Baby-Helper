@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "312009333518",
+    "project_id": "babyhelper-ef2b9",
+    "storage_bucket": "babyhelper-ef2b9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:312009333518:android:4307735409dca22f5dd55f",
+        "android_client_info": {
+          "package_name": "com.example.babyhelper"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBm2o0cTlEzRanVKONr26nf-SaRxV2xKmk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
