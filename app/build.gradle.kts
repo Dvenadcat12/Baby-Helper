@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("org.jetbrains.kotlin.kapt")
     //google services
     id("com.google.gms.google-services")
 }
@@ -60,7 +61,7 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     //Room
     implementation(libs.androidx.room.runtime)
-    implementation(libs.androidx.room.compiler)
+    kapt(libs.androidx.room.compiler)
     implementation(libs.androidx.room.ktx)
     // Lifecycle / ViewModel / LiveData
     implementation(libs.androidx.lifecycle.viewmodel.ktx)

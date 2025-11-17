@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8F0">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Заголовок -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Добавить ребёнка"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#FF6F61"
+            android:paddingBottom="24dp"/>
+
+        <!-- Поле имени -->
+        <EditText
+            android:id="@+id/etChildName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Имя ребёнка"
+            android:padding="14dp"
+            android:background="@drawable/edit_text_bg"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Поле даты рождения -->
+        <EditText
+            android:id="@+id/etChildBirthDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Дата рождения (дд.мм.гггг)"
+            android:padding="14dp"
+            android:focusable="false"
+            android:clickable="true"
+            android:background="@drawable/edit_text_bg"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Кнопка сохранить -->
+        <Button
+            android:id="@+id/btnSaveChild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Сохранить"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FFA88D"
+            android:padding="16dp"
+            android:textSize="18sp"
+            android:clipToOutline="true"/>
+
+    </LinearLayout>
+</ScrollView>
