@@ -3,10 +3,7 @@ package com.example.babyhelper
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import android.widget.ImageButton
-import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
@@ -27,20 +24,12 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
-        // Toolbar
-        val toolbar = findViewById<Toolbar>(R.id.mainToolbar)
-
-        // Иконка приложения слева
-        toolbar.findViewById<ImageView>(R.id.toolbarLogo).setOnClickListener {
-            // Можно сделать переход на главный экран (текущий)
+        // Кнопка Diary
+        findViewById<Button>(R.id.buttonDiary).setOnClickListener {
+            startActivity(Intent(this, DiaryActivity::class.java))
         }
 
-            // Кнопка настроек справа
-        //toolbar.findViewById<ImageButton>(R.id.buttonSettings).setOnClickListener {
-        //    startActivity(Intent(this, SettingsActivity::class.java))
-       // }
-
-        // Основные кнопки
+        // Остальные кнопки
         findViewById<Button>(R.id.buttonTips).setOnClickListener {
             startActivity(Intent(this, TipsActivity::class.java))
         }

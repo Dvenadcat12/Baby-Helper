@@ -1,30 +1,22 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    //google services
+    id("kotlin-kapt")  // ← ДОБАВИЛ ЭТУ СТРОЧКУ
     id("com.google.gms.google-services")
 }
 
 android {
     namespace = "com.example.babyhelper"
-    compileSdk {
-        version = release(36)
-    }
+    compileSdk = 34
 
     buildFeatures {
         viewBinding = true
-    }
-    configurations.all {
-        exclude(group = "com.intellij", module = "annotations")
-        resolutionStrategy {
-            force ("org.jetbrains:annotations:23.0.0")
-        }
     }
 
     defaultConfig {
         applicationId = "com.example.babyhelper"
         minSdk = 26
-        targetSdk = 36
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -58,24 +50,38 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    //Room
+
+    // Room
     implementation(libs.androidx.room.runtime)
-    implementation(libs.androidx.room.compiler)
     implementation(libs.androidx.room.ktx)
+    kapt(libs.androidx.room.compiler)  // ← ЗАМЕНИЛ annotationProcessor на kapt
+
     // Lifecycle / ViewModel / LiveData
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.lifecycle.livedata.ktx)
+
     // Coroutines
     implementation(libs.kotlinx.coroutines.android)
+
     // RecyclerView
     implementation(libs.androidx.recyclerview)
+
     // Gson
     implementation(libs.gson)
+
     // Material components
     implementation(libs.material)
 
-    //DATABASE
+    // Firebase
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.analytics)
-    implementation(libs.firebase.auth.ktx)
+    implementation(libs.firebase.auth.ktx)  // ← ТЕПЕРЬ БЕЗ КОНФЛИКТА ВЕРСИЙ
+}
+
+// Вынес конфигурации configurations.all наружу
+configurations.all {
+    exclude(group = "com.intellij", module = "annotations")
+    resolutionStrategy {
+        force("org.jetbrains:annotations:23.0.0")
+    }
 }

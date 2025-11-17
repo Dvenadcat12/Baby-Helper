@@ -4,10 +4,9 @@ import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.babyhelper.data.db.AppDatabase
 import com.example.babyhelper.data.repository.SleepRepository
+import com.example.babyhelper.data.db.AppDatabase
 import com.example.babyhelper.databinding.FragmentSleepListBinding
 import com.example.babyhelper.viewmodels.SleepViewModel
 import com.example.babyhelper.viewmodels.SleepViewModelFactory
