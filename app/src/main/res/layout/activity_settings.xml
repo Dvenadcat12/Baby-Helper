@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8F0"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Заголовок -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Настройки"
+            android:textStyle="bold"
+            android:textSize="28sp"
+            android:textColor="#FF6F61"
+            android:paddingBottom="24dp"/>
+
+        <!-- Карточка Настройки темы -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/btnTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Тема приложения"
+                android:textSize="18sp"
+                android:textColor="#FF6F61"
+                android:padding="12dp"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Карточка Уведомлений -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/btnNotifications"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Уведомления"
+                android:textSize="18sp"
+                android:textColor="#FF6F61"
+                android:padding="12dp"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Карточка Язык приложения -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/btnLanguage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Язык приложения"
+                android:textSize="18sp"
+                android:textColor="#FF6F61"
+                android:padding="12dp"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Карточка Резервного копирования -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/btnBackup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Резервное копирование"
+                android:textSize="18sp"
+                android:textColor="#FF6F61"
+                android:padding="12dp"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Карточка Выхода -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Выйти из аккаунта"
+                android:textSize="18sp"
+                android:textColor="#FF6F61"
+                android:padding="12dp"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Раздел Данные ребёнка -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Данные ребёнка"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FF6F61"
+            android:paddingBottom="12dp"
+            android:paddingTop="8dp"/>
+
+        <!-- Кнопка меню ребёнка -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/btnChildMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Открыть меню ребёнка"
+                android:textSize="18sp"
+                android:textColor="#FF6F61"
+                android:padding="12dp"/>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

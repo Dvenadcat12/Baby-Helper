@@ -1,4 +1,4 @@
-package com.example.babyhelper
+package com.example.babyhelper.mainpage
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,11 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import com.example.babyhelper.NotesActivity
+import com.example.babyhelper.R
+import com.example.babyhelper.TimerActivity
+import com.example.babyhelper.TipsActivity
+import com.example.babyhelper.loginpage.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
@@ -36,9 +41,12 @@ class MainActivity : AppCompatActivity() {
         }
 
             // Кнопка настроек справа
-        //toolbar.findViewById<ImageButton>(R.id.buttonSettings).setOnClickListener {
-        //    startActivity(Intent(this, SettingsActivity::class.java))
-       // }
+        val settingsButton = findViewById<ImageButton>(R.id.buttonSettings)
+
+        settingsButton.setOnClickListener {
+            val intent = Intent(this, SettingsActivity::class.java)
+            startActivity(intent)
+        }
 
         // Основные кнопки
         findViewById<Button>(R.id.buttonTips).setOnClickListener {
@@ -51,13 +59,6 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.buttonTimer).setOnClickListener {
             startActivity(Intent(this, TimerActivity::class.java))
-        }
-
-        // Кнопка выхода
-        findViewById<Button>(R.id.buttonLogout).setOnClickListener {
-            auth.signOut()
-            startActivity(Intent(this, LoginActivity::class.java))
-            finish()
         }
     }
 }

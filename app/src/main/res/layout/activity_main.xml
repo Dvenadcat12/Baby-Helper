@@ -47,27 +47,19 @@
             android:id="@+id/buttonTips"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tips"/>
+            android:text="Советы"/>
 
         <Button
             android:id="@+id/buttonNotes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Notes"/>
+            android:text="Заметки"/>
 
         <Button
             android:id="@+id/buttonTimer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Timer"/>
-
-        <Button
-            android:id="@+id/buttonLogout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="16dp"
-            android:text="Выйти" />
+            android:text="Таймер"/>
     </LinearLayout>
 
 </LinearLayout>
